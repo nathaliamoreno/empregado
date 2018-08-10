@@ -4,36 +4,40 @@
 
 using namespace std;
 
-Empregado::Empregado(char nome, char sobrenome, double salario){
+Empregado::Empregado(string nome, string sobrenome, double salario){
 
     this->nome = nome;
     this->sobrenome = sobrenome;
     this->salario = salario;
 
 }
-
-/*char Empregado::getNome() {
+void Empregado::setNome(string nome) {
+    this->nome = nome;
+}
+string Empregado::getNome() {
     return nome;
 }
-void Empregado::setNome(char nome) {
-    this.nome = nome;
+void Empregado::setSobrenome(string sobrenome) {
+    this->sobrenome = sobrenome;
 }
-char Empregado::getSobrenome() {
+string Empregado::getSobrenome() {
     return sobrenome;
 }
-void Empregado::setSobrenome(char sobrenome) {
-    this.sobrenome = sobrenome;
-}*/
-double Empregado::ValidaSalario() {
+void Empregado::setSalario(double salario) {
 
-    if (salario < 0){
-        cout<< "Valor nao configuravel"<< endl();
-        salario = 0.0;
+    if(salario>0){
+    this->salario = salario;
+
+    }else{
+        cout<<"Salario negativo, nao configurado!";
+    }
+}
+double Empregado::getSalario() {
+    return salario;
 }
 double Empregado::SalarioAnual(){
-
+    return salario*12;
  }
 double Empregado::CalculaAumento(){
-
+    return salario*.10;
 }
-
