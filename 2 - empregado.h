@@ -9,20 +9,19 @@ public:
     double salario;
 
     Empregado(std::string nome, std::string sobrenome, double salario);
-    double ValidaSalario();
+
     double SalarioAnual();
     double CalculaAumento();
 
 
-    /*char getNome();;
-    void setNome(char nome);
-
-    char getSobrenome();
-    void setSobrenome(char sobrenome);
-
-    double getSalario();
+    void setNome(std::string nome);
+    void setSobrenome(std::string sobrenome);
     void setSalario(double salario);
-*/
+
+    std::string getSobrenome();
+    std::string getNome();
+    double getSalario();
+
 };
 
 
